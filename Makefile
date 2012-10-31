@@ -1,7 +1,7 @@
 PATH := ./node_modules/.bin:$(PATH)
 
 test: compile
-	@NODE_ENV=test mocha-fibers --recursive test --compilers coffee:coffee-script
+	@NODE_ENV=test mocha-fibers --recursive test --compilers coffee:coffee-script --require should
 
 compile:
 	@coffee --compile --output lib/ src
