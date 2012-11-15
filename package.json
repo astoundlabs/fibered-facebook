@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "./lib/index",
   "dependencies": {
-	"fibers": "0.6.x"
+	"fibers": "0.6.x",
+    "fibered-http": "git://github.com/astoundlabs/fibered-http"
   },
   "devDependencies": {
 	"mocha-fibers": "git://github.com/astoundlabs/mocha-fibers",
