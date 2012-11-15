@@ -1,15 +1,17 @@
+http = require 'fibered-http'
+  
 module.exports = class Graph
 
   constructor: (@token, options = {}) ->
     throw new Error("Facebook token required") unless @token?
-    @http = options.http || require 'fibered-http'
+    @http = options.http || http
   
   get: (path, options = {}) ->
 
     query = options.query || {}
     query.access_token = @token
 
-    res = @http.request {protocol: 'https', hostname: 'graph.facebook.com', path: @path, query: query, timeout: options.timeout}
+    res = @http.request {protocol: 'https', hostname: 'graph.facebook.com', path: path, query: query, timeout: options.timeout}
     json = null
     try
       json = JSON.parse(res.body)

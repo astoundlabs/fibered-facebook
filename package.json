@@ -1,10 +1,10 @@
 {
   "name": "fibered-facebook",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./lib/index",
   "dependencies": {
 	"fibers": "0.6.x",
-    "fibered-http": "git://github.com/astoundlabs/fibered-http"
+    "fibered-http": "1.0.x"
   },
   "devDependencies": {
 	"mocha-fibers": "git://github.com/astoundlabs/mocha-fibers",
